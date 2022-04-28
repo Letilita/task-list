@@ -1,0 +1,13 @@
+* {
+    margin: 0.5rem;
+}
+
+div a {
+    text-decoration: none;
+    color:antiquewhite
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

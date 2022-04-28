@@ -7,11 +7,13 @@
         {{task.text}} 
         <fa-icon
          [icon]="faTimes"
-         [ngStyle]= "{'color': 'red'}"
+         [ngStyle]= "{'color': '#B02020'}"
          (click)="(onDelete(task))"
-         ></fa-icon></h3>
+         id="icono"
+         ></fa-icon>
+    </h3>
     <p>
-        {{task.day}}
+        {{task.day | date: 'short'}}
     </p>
 
 </div>
