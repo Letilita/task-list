@@ -1,4 +1,4 @@
 <footer>
     <p>Copyright © 2022</p>
-    <a  class="btn" routerLink="/about"> About</a>
+    <a  *ngIf="hasRoute('/')" class="btn" routerLink="/about"> About</a>
 </footer>
