@@ -25,12 +25,16 @@ export class TaskService {
     return this.http.get<Task[]>(this.apiUrl);
   }
 
+  // findTask(id: number){
+  //   let taskBuscada = this.getTasks.find(element => element.id === id);
+  // }
+
   deleteTask(task:Task):Observable<Task>{
     const url = `${this.apiUrl}/${task.id}`
     return this.http.delete<Task>(url);
   }
 
-  updateTaskReminder(task: Task):Observable<Task>{
+  updateTask(task: Task):Observable<Task>{
     const url = `${this.apiUrl}/${task.id}`
     return this.http.put<Task>(url, task, httOptions);
   }
@@ -41,10 +45,12 @@ export class TaskService {
 
   }
 
-  editTask(task: Task):Observable<Task>{
-    
-    return this.http.post<Task>(this.apiUrl, task, httOptions);
 
-  }
+
+  // editTask(task: Task):Observable<Task>{
+    
+  //   return this.http.post<Task>(this.apiUrl, task, httOptions);
+
+  // }
 
 }

@@ -21,12 +21,20 @@
         <p>
             {{task.day | date: 'EEEE, dd MMMM yy, HH:mm'}}hs       
         </p>
+        <div class="iconos">
+            <fa-icon
+                [icon]="faBell"
+                [ngStyle]= "{'color': '#123302'}"
+                *ngIf="task.reminder"       
+            ></fa-icon>
 
-        <fa-icon
-            [icon]="faPencil"
-            [ngStyle]= "{'color': 'black'}"
-            (click)="(onEdit(task))"         
-        ></fa-icon>
+
+            <fa-icon
+                [icon]="faPencil"
+                [ngStyle]= "{'color': 'black'}"
+                (click)="(onEdit())"         
+            ></fa-icon>
+        </div>
     </div>
 
 </div>

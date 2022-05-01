@@ -29,3 +29,7 @@ h3{
     display: flex;
     justify-content: space-between;
 }
+
+.iconos fa-icon {
+    margin: 0.4rem;
+}

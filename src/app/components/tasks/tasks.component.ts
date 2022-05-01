@@ -19,6 +19,7 @@ export class TasksComponent implements OnInit {
 
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks)=> {this.tasks = tasks});
+    
   }
 
   deleteTask(task:Task){
@@ -29,7 +30,7 @@ export class TasksComponent implements OnInit {
 
   toggleReminder(task: Task){
     task.reminder = !task.reminder;
-    this.taskService.updateTaskReminder(task).subscribe();
+    this.taskService.updateTask(task).subscribe();
 
   }
 
@@ -39,11 +40,11 @@ export class TasksComponent implements OnInit {
     })
   }
 
-  editTask(task:Task){
-    this.taskService.editTask(task).subscribe(()=>{
-      this.taskService.getTasks().subscribe((tasks)=> {this.tasks = tasks});
-  })
-  }
+  // editTask(task:Task){
+  //   this.taskService.editTask(task).subscribe(()=>{
+  //     this.taskService.getTasks().subscribe((tasks)=> {this.tasks = tasks});
+  // })
+  // }
 
   mostrarFecha(){
     let d = new Date();

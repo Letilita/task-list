@@ -1,7 +1,8 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import {Task} from "../../Task";
 import {TASK} from "../../mock-task"
-import { faPencil, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faPencil, faTimes, faBell } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 import { Event } from '@angular/router';
 
@@ -16,14 +17,16 @@ export class TasksItemComponent implements OnInit {
   @Input() task: Task = TASK[0];
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
   @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
-  @Output() onEditTask: EventEmitter<Task> = new EventEmitter();
+  // @Output() onEditTask: EventEmitter<Task> = new EventEmitter();
   faTimes= faTimes;
   faPencil = faPencil;
+  faBell = faBell;
   color: string = "rgba(214, 214, 213, 0.829)";
   today: Date = new Date()
+  
 
 
-  constructor() {
+  constructor(private router:Router) {
 
    }
 
@@ -46,8 +49,8 @@ export class TasksItemComponent implements OnInit {
     this.onToggleReminder.emit(task);
   }
 
-  onEdit(task: Task){
-    this.onEditTask.emit(task);
+  onEdit(){
+    this.router.navigate(["/update", this.task.id])
   }
 
 

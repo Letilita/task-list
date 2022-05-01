@@ -2,7 +2,7 @@
   "tasks": [
     {
       "text": "Hacer Portfolio",
-      "day": "2022-04-30T22:30",
+      "day": "2022-05-15T22:30",
       "reminder": true,
       "id": 12
     },
@@ -13,13 +13,7 @@
       "id": 13
     },
     {
-      "text": "Hacer contrato de Chascomús",
-      "day": "2022-04-30T17:00",
-      "reminder": true,
-      "id": 14
-    },
-    {
-      "text": "Completar los desafíos del vide de AP",
+      "text": "Completar los desafíos del video de AP",
       "day": "2022-05-01T21:00",
       "reminder": false,
       "id": 15
@@ -29,6 +23,12 @@
       "day": "2022-05-05T18:30",
       "reminder": false,
       "id": 16
+    },
+    {
+      "text": "Comprar cosas para conectar Lavavajillas",
+      "day": "2022-05-02T14:26",
+      "reminder": true,
+      "id": 17
     }
   ]
 }

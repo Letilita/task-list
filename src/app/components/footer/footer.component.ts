@@ -14,7 +14,7 @@ export class FooterComponent implements OnInit {
   }
 
   hasRoute(route:string){
-    return this.router.url === "/";
+    return this.router.url !== "/about";
   }
 
 }

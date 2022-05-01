@@ -1,0 +1,12 @@
+.botonera{
+    display: flex;
+    justify-content: center;
+}
+
+.guardar {
+    background-color: green ;
+}
+
+.cancelar {
+    background-color: brown;
+}
