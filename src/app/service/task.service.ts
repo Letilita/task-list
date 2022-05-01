@@ -41,4 +41,10 @@ export class TaskService {
 
   }
 
+  editTask(task: Task):Observable<Task>{
+    
+    return this.http.post<Task>(this.apiUrl, task, httOptions);
+
+  }
+
 }

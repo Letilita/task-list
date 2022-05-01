@@ -82,8 +82,6 @@ h1 {
 .form-control-check input {
     padding: 0;
     margin: 0;
-    height: 20px;
-    float: inline-start;
-    text-align: left;
+    height: 20px;    
     width: 10%;;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faLineChart } from '@fortawesome/free-solid-svg-icons';
 import { TaskService } from 'src/app/service/task.service';
 import { Task } from 'src/app/Task';
 
@@ -37,4 +38,16 @@ export class TasksComponent implements OnInit {
       this.taskService.getTasks().subscribe((tasks)=> {this.tasks = tasks});
     })
   }
+
+  editTask(task:Task){
+    this.taskService.editTask(task).subscribe(()=>{
+      this.taskService.getTasks().subscribe((tasks)=> {this.tasks = tasks});
+  })
+  }
+
+  mostrarFecha(){
+    let d = new Date();
+    return d.getDate();
+  }
+
 }

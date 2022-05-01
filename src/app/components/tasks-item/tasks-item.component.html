@@ -2,6 +2,7 @@
     class="task"
     [ngClass]="{reminder: task.reminder}"
     (dblclick)="onToggle(task)"
+    [ngStyle] ="{'background-color': color }"
 >
     <h3>
         {{task.text}} 
@@ -11,9 +12,21 @@
          (click)="(onDelete(task))"
          id="icono"
          ></fa-icon>
+
+
+
     </h3>
-    <p>
-        {{task.day | date: 'short'}}
-    </p>
+
+    <div class="flex">
+        <p>
+            {{task.day | date: 'EEEE, dd MMMM yy, HH:mm'}}hs       
+        </p>
+
+        <fa-icon
+            [icon]="faPencil"
+            [ngStyle]= "{'color': 'black'}"
+            (click)="(onEdit(task))"         
+        ></fa-icon>
+    </div>
 
 </div>

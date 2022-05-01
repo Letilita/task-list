@@ -14,7 +14,7 @@ export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
 
   text: string = "";
-  day: string = "";
+  day: Date = new Date();
   reminder: boolean = false;
   showAddTask:boolean = false;
   subscription?: Subscription;
@@ -28,7 +28,7 @@ export class AddTaskComponent implements OnInit {
 
   limpiarForm(){
     this.text = "";
-    this.day = "";
+    this.day = new Date();
     this.reminder= false;  
   }
 
