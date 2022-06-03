@@ -7,7 +7,7 @@
 }
 
 .task.reminder{
-    border-left: 5px solid green;
+    border-left: 5px solid;
 }
 
 .task h3{
@@ -32,4 +32,16 @@ h3{
 
 .iconos fa-icon {
     margin: 0.4rem;
+}
+
+.home {
+    border-left: 5px solid rgb(248, 145, 10);
+}
+
+.work {
+    border-left: 5px solid rgb(182, 182, 250);
+}
+
+.study {
+    border-left: 5px solid rgba(64, 199, 64, 0.432);
 }

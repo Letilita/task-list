@@ -25,6 +25,20 @@
             >
     </div>
 
+    <div class="form-control">
+        <label for="category">Type of Task</label>
+        <select class="form-control"            
+            name="category" 
+            id="category"             
+            [(ngModel)]="category"
+        > 
+            <option value=1>Home</option>
+            <option value=2>Work</option>
+            <option value=3>Study</option>
+        </select>
+    </div>
+
+
     <div class="form-control form-control-check">
         <label for="reminder">Reminder</label>
         <input 

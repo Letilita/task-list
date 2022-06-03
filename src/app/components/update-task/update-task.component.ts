@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Task } from 'src/app/Task';
+import { CATEGORY, Task } from 'src/app/Task';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TaskService } from 'src/app/service/task.service';
@@ -16,6 +16,7 @@ export class UpdateTaskComponent implements OnInit {
 
   text: string = "";
   day: Date = new Date();
+  category: CATEGORY = CATEGORY.Home;
   reminder: boolean = false;
   id: number = 0;
   tasks: Task[]=[];
@@ -33,6 +34,7 @@ export class UpdateTaskComponent implements OnInit {
       this.tasks = tasks.filter(t=>t.id==this.id);
       this.text=this.tasks[0].text;
       this.day=this.tasks[0].day;
+      this.category = this.tasks[0].category;
       this.reminder=this.tasks[0].reminder;
     
     });
@@ -45,8 +47,8 @@ export class UpdateTaskComponent implements OnInit {
     if(this.text.length===0){
       alert("Add a Task!")
     } else {
-      const {text, day, reminder, id} =this;
-      const updatedTask = {text, day, reminder, id};
+      const {text, day, category, reminder, id} =this;
+      const updatedTask = {text, day, category, reminder, id};
       
       this.taskService.updateTask(updatedTask).subscribe();
       this.router.navigate(["/"]);

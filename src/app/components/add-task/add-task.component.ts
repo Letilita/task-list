@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { Task } from 'src/app/Task';
+import { CATEGORY, Task } from 'src/app/Task';
 import { UiService } from 'src/app/service/ui.service';
 import { Subscription } from 'rxjs';
 
@@ -15,6 +15,7 @@ export class AddTaskComponent implements OnInit {
 
   text: string = "";
   day: Date = new Date();
+  category: CATEGORY = CATEGORY.Study;
   reminder: boolean = false;
   showAddTask:boolean = false;
   subscription?: Subscription;
@@ -29,15 +30,16 @@ export class AddTaskComponent implements OnInit {
   limpiarForm(){
     this.text = "";
     this.day = new Date();
-    this.reminder= false;  
+    this.category = CATEGORY.Home;
+    this.reminder= false;
   }
 
   onSubmit(){
     if(this.text.length===0){
       alert("Add a Task!")
     } else {
-    const {text,day,reminder} = this;
-    const newTask = {text, day, reminder};
+    const {text,day,category,reminder} = this;
+    const newTask = {text, day, category, reminder};
     this.onAddTask.emit(newTask);
     this.limpiarForm();   
   }

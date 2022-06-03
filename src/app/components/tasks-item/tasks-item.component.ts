@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-import {Task} from "../../Task";
+import {CATEGORY, Task} from "../../Task";
 import {TASK} from "../../mock-task"
 import { faPencil, faTimes, faBell } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';

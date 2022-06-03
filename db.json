@@ -1,34 +1,39 @@
 {
   "tasks": [
     {
-      "text": "Hacer Portfolio",
-      "day": "2022-05-15T22:30",
-      "reminder": true,
-      "id": 12
-    },
-    {
-      "text": "Aprender Angular",
-      "day": "2022-05-31T21:30",
-      "reminder": false,
-      "id": 13
-    },
-    {
       "text": "Completar los desafíos del video de AP",
-      "day": "2022-05-01T21:00",
+      "day": "2022-05-08T18:56",
+      "category": 3,
       "reminder": false,
       "id": 15
     },
     {
-      "text": "Hacer CV",
-      "day": "2022-05-05T18:30",
-      "reminder": false,
+      "text": "Pasar Portfolio a Angular",
+      "day": "2022-05-15T18:55",
+      "reminder": true,
+      "category": 3,
       "id": 16
     },
     {
-      "text": "Comprar cosas para conectar Lavavajillas",
-      "day": "2022-05-02T14:26",
-      "reminder": true,
+      "text": "Implementar Base de Datos en Portfolio",
+      "day": "2022-05-31T18:57",
+      "reminder": false,
+      "category": 3,
       "id": 17
+    },
+    {
+      "text": "Conectarme a las 9",
+      "day": "2022-05-09T09:00",
+      "category": 2,
+      "reminder": false,
+      "id": 19
+    },
+    {
+      "text": "Limpiar la cocina",
+      "day": "2022-05-08T11:07",
+      "category": "1",
+      "reminder": false,
+      "id": 20
     }
   ]
 }
